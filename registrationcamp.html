@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活动预约</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white">
+    <!-- 顶部导航 -->
+    <header class="bg-black sticky top-0 z-10 border-b border-gray-800">
+        <div class="flex items-center px-6 py-4">
+            <a href="campaigndetail.html" class="mr-4">
+                <i class="fas fa-chevron-left text-xl"></i>
+            </a>
+            <div class="text-xl font-light tracking-wider">活动预约</div>
+        </div>
+    </header>
+
+    <!-- 活动信息概览 -->
+    <div class="bg-gray-900 p-6 mt-2 mb-4">
+        <h1 class="text-lg font-light tracking-wider mb-4">2024 Ghost "欢庆女神" 臻选鉴赏会</h1>
+        
+        <div class="flex items-center text-gray-400 mb-3">
+            <i class="far fa-calendar-alt mr-3 w-5 text-center"></i>
+            <span class="tracking-wide">2024年6月15日 14:00-17:00</span>
+        </div>
+        
+        <div class="flex items-center text-gray-400">
+            <i class="fas fa-map-marker-alt mr-3 w-5 text-center"></i>
+            <span class="tracking-wide">北京市朝阳区劳斯莱斯精品展厅</span>
+        </div>
+    </div>
+
+    <!-- 预约表单 -->
+    <div class="bg-gray-900 p-6 mb-4">
+        <h2 class="text-base font-light tracking-wider mb-6">预约信息</h2>
+        
+        <!-- 手机号 -->
+        <div class="mb-6">
+            <label class="block text-sm text-gray-400 mb-2 tracking-wide">手机号</label>
+            <div class="flex items-center">
+                <div class="flex-1 bg-black border border-gray-800 rounded-lg py-3 px-4 phone-number-masked tracking-widest">
+                    138 **** 5678
+                </div>
+                <button class="ml-3 text-gray-400 text-sm tracking-wide">
+                    修改
+                </button>
+            </div>
+        </div>
+        
+        <!-- 姓名 -->
+        <div class="mb-6">
+            <label class="block text-sm text-gray-400 mb-2 tracking-wide">姓名</label>
+            <input type="text" class="w-full bg-black border border-gray-800 rounded-lg py-3 px-4 text-white tracking-wide" 
+                   placeholder="请输入您的真实姓名">
+        </div>
+        
+        <!-- 随行人数 -->
+        <div class="mb-6">
+            <label class="block text-sm text-gray-400 mb-2 tracking-wide">随行人数</label>
+            <div class="flex items-center">
+                <button class="w-12 h-12 rounded-lg bg-black border border-gray-800 flex items-center justify-center">
+                    <i class="fas fa-minus text-gray-400"></i>
+                </button>
+                <div class="flex-1 text-center font-light text-lg tracking-wider">
+                    1
+                </div>
+                <button class="w-12 h-12 rounded-lg bg-black border border-gray-800 flex items-center justify-center">
+                    <i class="fas fa-plus text-white"></i>
+                </button>
+            </div>
+            <div class="text-xs text-gray-500 mt-2 tracking-wide">
+                每位贵宾最多可携带2位随行人员
+            </div>
+        </div>
+        
+        <!-- 是否需要专属接送 -->
+        <div class="mb-6">
+            <label class="block text-sm text-gray-400 mb-2 tracking-wide">是否需要专属接送</label>
+            <div class="flex space-x-6">
+                <label class="flex items-center">
+                    <input type="radio" name="pickup" class="form-radio h-4 w-4 text-white border-gray-800" checked>
+                    <span class="ml-2 tracking-wide">是</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="radio" name="pickup" class="form-radio h-4 w-4 text-white border-gray-800">
+                    <span class="ml-2 tracking-wide">否</span>
+                </label>
+            </div>
+        </div>
+        
+        <!-- 特殊需求 -->
+        <div class="mb-3">
+            <label class="block text-sm text-gray-400 mb-2 tracking-wide">特殊需求（选填）</label>
+            <textarea class="w-full bg-black border border-gray-800 rounded-lg py-3 px-4 h-24 text-white tracking-wide" 
+                      placeholder="请告知我们您的特殊需求，我们将竭诚为您服务"></textarea>
+        </div>
+    </div>
+    
+    <!-- 活动须知 -->
+    <div class="bg-gray-900 p-6 mb-24">
+        <h2 class="text-base font-light tracking-wider mb-4">活动须知</h2>
+        <div class="text-sm text-gray-400 leading-relaxed tracking-wide">
+            <p class="mb-3">1. 请务必携带有效身份证件参加活动；</p>
+            <p class="mb-3">2. 活动当天请着正装出席；</p>
+            <p class="mb-3">3. 活动期间请遵守展厅礼仪；</p>
+            <p class="mb-3">4. 如需取消预约，请提前48小时告知。</p>
+        </div>
+        
+        <!-- 隐私条款 -->
+        <div class="mt-6">
+            <label class="flex items-start">
+                <input type="checkbox" class="form-checkbox h-5 w-5 mt-0.5 text-white border-gray-800" id="agreement-checkbox">
+                <span class="ml-2 text-sm text-gray-400 tracking-wide">
+                    我已阅读并同意<a href="#" class="text-white">《活动须知》</a>和<a href="#" class="text-white">《隐私保护政策》</a>
+                </span>
+            </label>
+        </div>
+    </div>
+    
+    <!-- 底部提交按钮 -->
+    <div class="fixed bottom-0 left-0 right-0 bg-black bg-opacity-90 backdrop-blur-lg px-6 py-4 border-t border-gray-800">
+        <button id="submit-btn" class="w-full bg-gray-800 text-gray-400 font-light tracking-wider py-3 rounded-full" disabled>
+            确认预约
+        </button>
+    </div>
+
+    <script>
+        // 处理同意条款勾选状态
+        const agreementCheckbox = document.getElementById('agreement-checkbox');
+        const submitBtn = document.getElementById('submit-btn');
+        
+        agreementCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                submitBtn.classList.remove('bg-gray-800', 'text-gray-400');
+                submitBtn.classList.add('bg-white', 'text-black');
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.classList.remove('bg-white', 'text-black');
+                submitBtn.classList.add('bg-gray-800', 'text-gray-400');
+                submitBtn.disabled = true;
+            }
+        });
+        
+        // 提交按钮点击事件
+        submitBtn.addEventListener('click', function() {
+            if (!this.disabled) {
+                alert('预约成功！');
+                window.location.href = 'campaign.html';
+            }
+        });
+    </script>
+</body>
+</html>

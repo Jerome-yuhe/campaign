@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车主APP原型</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+        .phone-frame {
+            width: 390px;
+            height: 844px;
+            border-radius: 40px;
+            padding: 10px;
+            background-color: #000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        .screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            overflow: hidden;
+            background-color: white;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 160px;
+            height: 30px;
+            background-color: #000;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl font-bold text-center mb-8">车主APP原型设计</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+            <!-- 活动列表页面 -->
+            <div>
+                <h2 class="text-xl font-semibold text-center mb-4">活动列表页面</h2>
+                <div class="phone-frame">
+                    <div class="notch"></div>
+                    <div class="screen">
+                        <iframe src="campaign.html" title="活动列表"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 活动详情页面 -->
+            <div>
+                <h2 class="text-xl font-semibold text-center mb-4">活动详情页面</h2>
+                <div class="phone-frame">
+                    <div class="notch"></div>
+                    <div class="screen">
+                        <iframe src="campaigndetail.html" title="活动详情"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 活动报名页面 -->
+            <div>
+                <h2 class="text-xl font-semibold text-center mb-4">活动报名页面</h2>
+                <div class="phone-frame">
+                    <div class="notch"></div>
+                    <div class="screen">
+                        <iframe src="registrationcamp.html" title="活动报名"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

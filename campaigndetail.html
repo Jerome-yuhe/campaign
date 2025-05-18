@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活动详情</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .mobile-bottom-safe-area {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+        
+        .button-gradient {
+            background: linear-gradient(90deg, #C0C0C0 0%, #FFFFFF 50%, #C0C0C0 100%);
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-button {
+                margin-bottom: env(safe-area-inset-bottom);
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- 顶部图片 -->
+    <div class="relative">
+        <img src="https://images.unsplash.com/photo-1631295868223-63265b40d9e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+             alt="Ghost展示" class="w-full h-80 object-cover">
+             
+        <!-- 返回按钮和分享 -->
+        <div class="absolute top-0 left-0 right-0 header-gradient h-20 flex items-center">
+            <a href="campaign.html" class="p-4 text-white">
+                <i class="fas fa-chevron-left text-xl"></i>
+            </a>
+            <div class="flex-1"></div>
+            <button class="p-4 text-white">
+                <i class="far fa-share-square"></i>
+            </button>
+        </div>
+        
+        <!-- 活动类型标签 -->
+        <div class="absolute bottom-4 left-4">
+            <span class="activity-badge px-3 py-1 rounded-full text-xs tracking-wider">新车发布</span>
+        </div>
+    </div>
+
+    <!-- 活动内容 -->
+    <div class="px-6 py-8 bg-black -mt-6 rounded-t-3xl relative z-10">
+        <h1 class="text-2xl font-light tracking-wider mb-4">2024 Ghost "欢庆女神" 臻选鉴赏会</h1>
+        
+        <!-- 活动时间和地点 -->
+        <div class="space-y-3 mb-6">
+            <div class="flex items-center text-gray-400">
+                <i class="far fa-calendar-alt mr-3 w-5 text-center"></i>
+                <span class="tracking-wide">2024年6月15日 14:00-17:00</span>
+            </div>
+            <div class="flex items-center text-gray-400">
+                <i class="fas fa-map-marker-alt mr-3 w-5 text-center"></i>
+                <span class="tracking-wide">北京市朝阳区劳斯莱斯精品展厅</span>
+            </div>
+        </div>
+        
+        <!-- 活动状态 -->
+        <div class="flex items-center mb-8">
+            <span class="bg-gray-800 text-white py-1 px-4 rounded-full text-sm tracking-wider">
+                限量预约
+            </span>
+            <span class="ml-3 text-gray-400 text-sm tracking-wide">
+                剩余名额：8/20
+            </span>
+        </div>
+        
+        <!-- 活动介绍 -->
+        <div class="mb-10">
+            <h2 class="text-lg font-light tracking-wider mb-4">活动介绍</h2>
+            <p class="text-gray-400 leading-relaxed tracking-wide">
+                诚邀您莅临全新Ghost "欢庆女神" 臻选鉴赏会。在这场独特的体验中，您将近距离感受Ghost所承载的精湛工艺与优雅气质。我们的专业顾问将为您详细解读每一处精妙设计，让您深入了解劳斯莱斯的非凡造诣。
+            </p>
+            <div class="mt-6 grid grid-cols-2 gap-3">
+                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+                     alt="Ghost细节展示" class="rounded-lg w-full h-40 object-cover">
+                <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+                     alt="内饰展示" class="rounded-lg w-full h-40 object-cover">
+            </div>
+        </div>
+        
+        <!-- 活动亮点 -->
+        <div class="mb-10">
+            <h2 class="text-lg font-light tracking-wider mb-4">尊享礼遇</h2>
+            <ul class="space-y-4 text-gray-400">
+                <li class="flex items-start">
+                    <i class="fas fa-check text-xs mt-1.5 mr-3"></i>
+                    <span class="tracking-wide">专属品鉴顾问一对一讲解服务</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check text-xs mt-1.5 mr-3"></i>
+                    <span class="tracking-wide">限量版"欢庆女神"艺术臻品</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check text-xs mt-1.5 mr-3"></i>
+                    <span class="tracking-wide">英式下午茶歇与香槟畅饮</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check text-xs mt-1.5 mr-3"></i>
+                    <span class="tracking-wide">优先预约试驾体验机会</span>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- 活动流程 -->
+        <div class="mb-32 md:mb-24">
+            <h2 class="text-lg font-light tracking-wider mb-4">活动流程</h2>
+            <div class="relative pl-6 border-l border-gray-800">
+                <div class="mb-6 relative">
+                    <div class="absolute -left-[13px] w-5 h-5 rounded-full bg-gray-800 border border-gray-700"></div>
+                    <div class="font-light tracking-wider mb-1">14:00 - 14:30</div>
+                    <div class="text-gray-400 tracking-wide">贵宾签到与欢迎香槟</div>
+                </div>
+                <div class="mb-6 relative">
+                    <div class="absolute -left-[13px] w-5 h-5 rounded-full bg-gray-800 border border-gray-700"></div>
+                    <div class="font-light tracking-wider mb-1">14:30 - 15:30</div>
+                    <div class="text-gray-400 tracking-wide">Ghost细节品鉴与工艺解析</div>
+                </div>
+                <div class="mb-6 relative">
+                    <div class="absolute -left-[13px] w-5 h-5 rounded-full bg-gray-800 border border-gray-700"></div>
+                    <div class="font-light tracking-wider mb-1">15:30 - 16:30</div>
+                    <div class="text-gray-400 tracking-wide">英式下午茶与艺术交流</div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[13px] w-5 h-5 rounded-full bg-gray-800 border border-gray-700"></div>
+                    <div class="font-light tracking-wider mb-1">16:30 - 17:00</div>
+                    <div class="text-gray-400 tracking-wide">臻品赠送与尊贵合影</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 底部报名按钮 - 移动端优化 -->
+    <div class="fixed bottom-0 left-0 right-0 bg-black bg-opacity-80 backdrop-blur-md border-t border-gray-800 mobile-bottom-safe-area">
+        <!-- 大屏幕显示 -->
+        <div class="hidden md:flex items-center justify-between px-6 py-4">
+            <div>
+                <div class="text-sm text-gray-300">限量专属体验</div>
+                <div class="text-white font-light tracking-wider">仅限20位贵宾</div>
+            </div>
+            <a href="registrationcamp.html" class="button-gradient text-black font-light tracking-wider py-3.5 px-10 rounded-full flex items-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <span class="mr-2">立即预约</span>
+                <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+        </div>
+
+        <!-- 移动端显示 -->
+        <div class="block md:hidden">
+            <!-- 移动端状态信息 -->
+            <div class="flex items-center justify-center pt-2 space-x-3 text-xs">
+                <span class="text-gray-300">限量专属体验</span>
+                <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+                <span class="text-gray-300">仅限20位贵宾</span>
+            </div>
+            <!-- 移动端按钮 -->
+            <div class="p-4">
+                <a href="registrationcamp.html" 
+                   class="block button-gradient text-black font-light tracking-wider py-4 rounded-full text-center shadow-lg active:shadow-md transition-all duration-300 mobile-button">
+                    立即预约
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 处理iOS底部安全区域
+        document.documentElement.style.setProperty(
+            '--vh', 
+            `${window.innerHeight * 0.01}px`
+        );
+
+        window.addEventListener('resize', () => {
+            document.documentElement.style.setProperty(
+                '--vh', 
+                `${window.innerHeight * 0.01}px`
+            );
+        });
+    </script>
+</body>
+</html>

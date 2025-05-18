@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活动列表</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white">
+    <!-- 顶部导航栏 -->
+    <header class="bg-black sticky top-0 z-10">
+        <div class="flex items-center justify-between px-4 py-3">
+            <div class="text-xl font-light tracking-wider">精致活动</div>
+            <div class="flex items-center space-x-4">
+                <button class="p-2">
+                    <i class="fas fa-search text-gray-400"></i>
+                </button>
+                <button class="p-2 relative">
+                    <i class="fas fa-bell text-gray-400"></i>
+                    <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 标签切换 -->
+        <div class="flex border-b border-gray-800">
+            <button id="tab-activities" class="flex-1 py-3 text-center tab-active font-light tracking-wider">
+                活动
+            </button>
+            <button id="tab-albums" class="flex-1 py-3 text-center text-gray-500 font-light tracking-wider">
+                相册
+            </button>
+        </div>
+    </header>
+
+    <!-- 内容区域 -->
+    <main class="pb-20">
+        <!-- 活动列表 -->
+        <div id="activities-content" class="px-4 pt-6">
+            <!-- 精选活动展示 -->
+            <div class="mb-8">
+                <div class="luxury-card rounded-2xl overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Ghost系列展示" class="w-full h-72 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-light tracking-wider mb-2">Ghost "欢庆女神" 时计画廊</h3>
+                        <p class="text-gray-300 text-sm tracking-wide">探索劳斯莱斯汽车</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 活动卡片列表 -->
+            <div class="space-y-6">
+                <!-- 新车发布活动 -->
+                <div class="luxury-card rounded-xl overflow-hidden">
+                    <a href="campaigndetail.html">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                                 alt="Phantom系列展示" class="w-full h-48 object-cover">
+                            <div class="absolute top-3 left-3">
+                                <span class="activity-badge px-3 py-1 rounded-full text-xs tracking-wider">新车发布</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-light text-lg tracking-wider mb-2">2024 Phantom 臻选鉴赏会</h3>
+                            <div class="flex items-center text-gray-400 text-sm">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span class="tracking-wide">2024年6月15日 14:00</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 品鉴活动 -->
+                <div class="luxury-card rounded-xl overflow-hidden">
+                    <a href="campaigndetail.html">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                                 alt="品鉴活动" class="w-full h-48 object-cover">
+                            <div class="absolute top-3 left-3">
+                                <span class="activity-badge px-3 py-1 rounded-full text-xs tracking-wider">品牌体验</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-light text-lg tracking-wider mb-2">英伦贵族生活品鉴会</h3>
+                            <div class="flex items-center text-gray-400 text-sm">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span class="tracking-wide">2024年7月8日-10日</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 相册列表 -->
+        <div id="albums-content" class="px-4 pt-6 hidden">
+            <div class="grid grid-cols-2 gap-4">
+                <!-- 相册项目 1 -->
+                <div class="luxury-card rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1631295868223-63265b40d9e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                             alt="Ghost展示相册" class="w-full h-40 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-light text-sm tracking-wider">Ghost臻选展示</h3>
+                        <div class="flex items-center text-gray-400 text-xs mt-1">
+                            <i class="far fa-images mr-1"></i>
+                            <span>24张照片</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 相册项目 2 -->
+                <div class="luxury-card rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                             alt="品鉴会相册" class="w-full h-40 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-light text-sm tracking-wider">英伦贵族生活品鉴会</h3>
+                        <div class="flex items-center text-gray-400 text-xs mt-1">
+                            <i class="far fa-images mr-1"></i>
+                            <span>36张照片</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部导航栏 -->
+    <footer class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-800">
+        <div class="flex justify-around items-center h-20 px-6">
+            <a href="#" class="flex flex-col items-center justify-center">
+                <i class="fas fa-home nav-icon active text-2xl"></i>
+                <span class="text-xs mt-1 text-gray-400">首页</span>
+            </a>
+            <a href="#" class="flex flex-col items-center justify-center">
+                <i class="fas fa-car nav-icon text-2xl"></i>
+                <span class="text-xs mt-1 text-gray-400">车库</span>
+            </a>
+            <a href="#" class="flex flex-col items-center justify-center">
+                <img src="https://www.rolls-roycemotorcars.com/content/dam/rrmc/marketUK/rollsroycemotorcars_com/spirit-of-ecstasy/component-assets/spirit-of-ecstasy.jpg" 
+                     alt="Spirit of Ecstasy" class="w-8 h-8 object-contain">
+                <span class="text-xs mt-1 text-gray-400">礼遇</span>
+            </a>
+            <a href="#" class="flex flex-col items-center justify-center">
+                <i class="fas fa-user nav-icon text-2xl"></i>
+                <span class="text-xs mt-1 text-gray-400">我的</span>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // 标签切换功能
+        const tabActivities = document.getElementById('tab-activities');
+        const tabAlbums = document.getElementById('tab-albums');
+        const activitiesContent = document.getElementById('activities-content');
+        const albumsContent = document.getElementById('albums-content');
+
+        tabActivities.addEventListener('click', function() {
+            tabActivities.classList.add('tab-active');
+            tabActivities.classList.remove('text-gray-500');
+            tabAlbums.classList.remove('tab-active');
+            tabAlbums.classList.add('text-gray-500');
+            activitiesContent.classList.remove('hidden');
+            albumsContent.classList.add('hidden');
+        });
+
+        tabAlbums.addEventListener('click', function() {
+            tabAlbums.classList.add('tab-active');
+            tabAlbums.classList.remove('text-gray-500');
+            tabActivities.classList.remove('tab-active');
+            tabActivities.classList.add('text-gray-500');
+            albumsContent.classList.remove('hidden');
+            activitiesContent.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
